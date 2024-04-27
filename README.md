@@ -1,7 +1,7 @@
 ### Introduction
 
 This repository is used to bootstrap the RHACM Hub cluster as well as hold the ACM configuration
-I use in my homelab environment. It is referenced by the [cluster-config](https://github.com/gnunn-gitops/cluster-config) repo for the `local.hub` cluster's ACM applications (Hub, Policies and Observerability).
+I use in my homelab environment. It is referenced by the [cluster-config](https://github.com/AplphaGO/cluster-config) repo for the `local.hub` cluster's ACM applications (Hub, Policies and Observerability).
 
 From the perspective of bootstrapping the Hub there are a couple of different ways to go. You could
 manually install OpenShift GitOps and have it bootstrap everything on the Hub including RHACM. However while

@@ -10,9 +10,9 @@ spec:
     exec.enabled: "true"
     resource.respectRBAC: "normal"
     resource.ignoreResourceUpdatesEnabled: 'true'
-    resource.customizations.ignoreResourceUpdates.external-secrets.io_ExternalSecret: |
-      jsonPointers:
-      - /status/refreshTime
+    #resource.customizations.ignoreResourceUpdates.external-secrets.io_ExternalSecret: |
+    #  jsonPointers:
+    #  - /status/refreshTime
     resource.customizations.ignoreResourceUpdates.ocs.openshift.io_StorageCluster: |
       jsonPointers:
       - /status
@@ -30,14 +30,14 @@ spec:
       - /status
       - /metadata/resourceVersion
     accounts.admin: apiKey, login
-    ui.cssurl: 'https://gnunn-gitops.github.io/cluster-config/themes/{{ fromClusterClaim "gitops" }}/custom-cluster.css'
+    ui.cssurl: 'https://AplphaGO.github.io/cluster-config/themes/{{ fromClusterClaim "gitops" }}/custom-cluster.css'
   kustomizeBuildOptions: "--enable-helm --enable-alpha-plugins"
-  oidcConfig: |
-    name: Keycloak
-    issuer: https://sso.ocplab.com/realms/ocplab
-    clientID: argocd
-    clientSecret: $oidc.keycloak.clientSecret
-    requestedScopes: ["openid", "profile", "email", "groups"]
+  #oidcConfig: |
+  #  name: Keycloak
+  #  issuer: https://sso.ocplab.com/realms/ocplab
+  #  clientID: argocd
+  #  clientSecret: $oidc.keycloak.clientSecret
+  #  requestedScopes: ["openid", "profile", "email", "groups"]
   controller:
     resources:
       limits:

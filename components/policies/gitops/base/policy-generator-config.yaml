@@ -8,9 +8,9 @@ policyDefaults:
 placementBindingDefaults:
   name: "binding-policy-gitops"
 policies:
-  - name: policy-eso-secret-store
-    manifests:
-      - path: manifests/eso/base/
+  #- name: policy-eso-secret-store
+  #  manifests:
+  #    - path: manifests/eso/base/
   - name: policy-gitops-subscription
     remediationAction: enforce
     manifests:
@@ -25,21 +25,21 @@ policies:
   - name: policy-gitops-bootstrap
     manifests:
       - path: manifests/gitops-bootstrap/base/
-  - name: policy-gitops-notifications
-    remediationAction: enforce
-    manifests:
-      - path: manifests/gitops-notifications/base/
-    configurationPolicyAnnotations:
-      policy.open-cluster-management.io/disable-templates: "true"
+  #- name: policy-gitops-notifications
+  #  remediationAction: enforce
+  #  manifests:
+  #    - path: manifests/gitops-notifications/base/
+  #  configurationPolicyAnnotations:
+  #    policy.open-cluster-management.io/disable-templates: "true"
 policySets:
   - name: "gitops"
     description: "Policy for bootstrapping cluster with gitops"
     policies:
-      - policy-eso-secret-store
+      #- policy-eso-secret-store
       - policy-gitops-subscription
       - policy-gitops-instance
       - policy-gitops-bootstrap
-      - policy-gitops-notifications
+      #- policy-gitops-notifications
     generatePolicySetPlacement: false
     placement:
       name: placement-policy-gitops
