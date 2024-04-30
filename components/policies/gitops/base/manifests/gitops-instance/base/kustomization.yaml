@@ -1,4 +1,5 @@
 resources:
 - setenv-cmp-plugin-cm.yaml
 #- argocd-external-secret.yaml
+#- sso-ca.yaml
 - argocd.yaml
