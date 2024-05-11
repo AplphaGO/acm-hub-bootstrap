@@ -10,7 +10,7 @@ spec:
     oidc.config: |
       name: Keycloak
       issuer: https://keycloak-sso.apps.hub.lab.local/auth/realms/myorg
-      clientID: argocd-{{ fromClusterClaim "name" }}-client
+      clientID: argocd-client
       clientSecret: ocp-secret
       requestedScopes: ["openid", "profile", "email"]
       rootCA: |
