@@ -4,6 +4,6 @@ kind: Kustomization
 namespace: acm-policies
 
 resources:
- - ../../../../components/policies/compliance/base
+#- ../../../../components/policies/compliance/base
  - ../../../../components/policies/cert-expiration/base
  - ../../../../components/policies/gitops/base
